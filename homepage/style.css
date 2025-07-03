@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #fff3b5);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 16px;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  width: 1.6875rem;
+  height: 1.6875rem;
+}
+
+header {
+  display: flex;
+  margin-top: 47px;
+  margin-left: 13px;
+  margin-right: 13px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.nav {
+  display: flex;
+  flex-flow: column;
+}
+
+.language-selector {
+  width: 5.4375rem;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.logo-principal {
+  max-width: 9.375rem;
+  max-height: 2.625rem;
+}
+
+.language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 5.4375rem;
+  height: 2.125rem;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
+
+.option {
+  position: absolute;
+  bottom: 40px;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.close {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.menu {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.navegation {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.8s ease;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.linea-del-nav {
+  border-bottom: solid 1px #ff9245;
+  width: 21.625rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url(../media/Hero-Photo.jpg);
+  width: 100%;
+  height: 17rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 30px 0px 16px 0px;
+  margin-bottom: 40px;
+  margin-top: 27px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.principal {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  line-height: 25px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 25px;
+  color: #fff;
+  margin: 0px 33px;
+}
+
+.activities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 52px;
+  width: 20.75rem;
+  height: 4.5625rem;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 30px;
+
+  color: #fff;
+  background-color: #ff9245;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.vocabulary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 52px;
+  width: 20.75rem;
+  height: 4.5625rem;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 30px;
+
+  color: #fff;
+  background-color: #ff9245;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.grammar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 52px;
+  width: 20.75rem;
+  height: 4.5625rem;
+  font-size: 24px;
+
+  padding: 0 30px;
+  font-weight: bold;
+  color: #eee;
+  background-color: #ff9245;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+}
+
+.symbol {
+  font-size: 50px;
+}
+
+footer {
+  background-color: #00464d;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0;
+  gap: 18px;
+  margin-top: 3.125rem;
+  min-width: 100%;
+}
+
+footer hr {
+  border-color: #fff;
+  width: 100%;
+}
+
+.footer-links {
+  margin-left: 19px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.colaborativa-logo {
+  width: 12.9275rem;
+  height: 3.625rem;
+  margin-bottom: 22px;
+}
+
+.links {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 14px;
+  min-width: 100%;
+}
+
+.all-logos {
+  display: flex;
+  align-items: center;
+  margin-top: 33px;
+  gap: 2.1875rem;
+}
+
+.logo {
+  height: 3rem;
+  margin: 33px 0;
+}
+
+.last-text {
+  margin-top: 32px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  body {
+    position: static;
+  }
+
+  header {
+    flex-flow: row;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.1) 40%
+      ),
+      url(../media/Hero-Photo.jpg);
+
+    width: 100%;
+    height: 25rem;
+    background-size: cover;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    text-align: center;
+    justify-content: right;
+    padding: 30px 30px 16px 30px;
+    margin: 0;
+    border-radius: 0 0 50% 50% / 0 17% 17%;
+    position: relative;
+  }
+
+  .hero {
+    background-image: none;
+    position: absolute;
+    top: 1%;
+    width: 60.0625rem;
+  }
+  .description {
+    font-size: 2.25rem;
+    line-height: normal;
+    display: inline-block;
+    margin-top: -20px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .menu {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+  .navegation {
+    display: none;
+  }
+
+  .about-us-help {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    justify-content: right;
+    margin: 4px;
+    font-size: 24px;
+    z-index: 5;
+  }
+
+  .enlace {
+    color: #fff;
+    margin: 0;
+  }
+
+  .enlace:hover {
+    text-decoration: underline;
+    color: #ff9245;
+  }
+
+  .language-selector {
+    height: 2.125rem;
+  }
+
+  .option {
+    z-index: 5;
+  }
+
+  .principal {
+    margin-top: 25px;
+    flex-flow: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .activities {
+    flex-flow: column;
+    width: 237px;
+    height: 237px;
+    font-size: 28px;
+    font-weight: bold;
+    gap: 12px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .vocabulary {
+    flex-flow: column;
+    width: 237px;
+    height: 237px;
+    font-size: 28px;
+    font-weight: bold;
+    gap: 12px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .grammar {
+    flex-flow: column;
+    width: 237px;
+    height: 237px;
+    font-size: 28px;
+    font-weight: bold;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .symbol {
+    font-size: 105px;
+  }
+
+  footer {
+    margin-top: 66px;
+    height: 15.875rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  footer hr {
+    display: none;
+  }
+
+  .colaborativa-logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 45px 45px;
+    justify-self: left;
+  }
+
+  .links {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: self-start;
+    gap: 3rem;
+    margin-top: 45px;
+    padding: 0;
+    font-size: 1.375rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    color: #eee;
+    font-size: 1.25rem;
+  }
+
+  .all-logos {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin: 0;
+    justify-self: end;
+    align-self: center;
+    margin-right: 45px;
+  }
+
+  .logo {
+    height: 2.448125rem;
+  }
+
+  .last-text {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .principal {
+    gap: 5.875rem;
+  }
+}

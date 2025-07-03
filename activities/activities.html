@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="activities.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=checklist"
+    />
+    <title>Activities - ESOL - Web - Applicacion</title>
+    <link rel="icon" href="../media/Designer.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <div class="enunciado hidden">
+        <div class="logo-principal">
+          <img
+            class="logo-principal"
+            src="../media/LaColaborativa-logo.webp"
+            alt="logo principal"
+          />
+        </div>
+
+        <nav class="header-links">
+          <a class="header-text" href="../index.html">Home</a>
+          <a class="header-text" href="#">Help</a>
+          <a class="header-text" href="#">About Us</a>
+        </nav>
+      </div>
+
+      <div class="go-back">
+        <a href="../index.html"
+          ><img
+            class="arrow-back"
+            src="../media/icons8-back-arrow-96.png"
+            alt="Arrow back"
+        /></a>
+      </div>
+
+      <div class="header-text2">
+        <div class="symbol hidden">
+          <span id="check" class="material-symbols-outlined"> checklist </span>
+        </div>
+
+        <div>
+          <h2 class="activities-text">Activities</h2>
+        </div>
+      </div>
+    </header>
+    <div class="language-selector">
+      <div class="language selected default">
+        <img class="flag" src="../media/us.svg" alt="American flag" />
+        <p class="language-text">EN</p>
+      </div>
+      <div class="language option hidden">
+        <img
+          class="flag"
+          src="../media/icons8-spanish-flag-48.png"
+          alt="Spanish flag"
+        />
+        <p class="language-text">ES</p>
+      </div>
+    </div>
+    <main>
+      <section class="input-and-text">
+        <div class="input-container">
+          <input id="input" type="text" placeholder="Search a topic" />
+          <button class="search">
+            <img
+              class="search-icon"
+              src="../media/icons8-search-16.png"
+              alt="Search icon"
+            />
+          </button>
+        </div>
+        <div class="text">
+          <p>
+            Improve your English by choosing a topic you like and doing fun
+            activities. Learn new words, practice grammar, and improve your
+            speaking and understanding
+          </p>
+        </div>
+      </section>
+      <section class="all-sections">
+        <div class="topics greetings">
+          <div class="background">
+            <img
+              class="image"
+              src="../media/Greetings.svg"
+              alt="A man and a woman talking to each other"
+            />
+          </div>
+          <div class="description">
+            <h3>Greetings</h3>
+            <p>Practice basic English greetings for everyday conversations.</p>
+          </div>
+        </div>
+
+        <div class="topics professions">
+          <div class="background">
+            <img
+              class="image"
+              src="../media/undraw_doctors_djoj.svg"
+              alt="Two doctors making a conversation"
+            />
+          </div>
+          <div class="description">
+            <h3>Professions</h3>
+            <p>
+              Learn and practice vocabulary for common jobs and occupations.
+            </p>
+          </div>
+        </div>
+
+        <div class="topics family">
+          <div class="background">
+            <img
+              class="image"
+              src="../media/undraw_family_6gj8.svg"
+              alt="A beautiful family"
+            />
+          </div>
+          <div class="description">
+            <h3>Family</h3>
+            <p>
+              Learn vocabulary to talk about family members and relationships.
+            </p>
+          </div>
+        </div>
+        <div class="topics to-be">
+          <div class="background">
+            <img
+              class="image"
+              src="../media/undraw_bibliophile_sbt0.svg"
+              alt="A woman reading a book"
+            />
+          </div>
+          <div class="description">
+            <h3>The Verb "To Be"</h3>
+            <p>Practice using am, is, and are in simple sentences.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal">
+        <div class="header">
+          <h3 class="difficult">Select a level</h3>
+          <button class="close-window">&times;</button>
+        </div>
+        <section class="levels">
+          <div class="box">
+            <label class="radio-personalizado">
+              <input type="radio" name="difficult" value="basic" checked /><span
+                class="radio-circulo"
+              ></span>
+              Basic
+            </label>
+          </div>
+          <div class="box">
+            <label class="radio-personalizado">
+              <input type="radio" name="difficult" value="intermediate" /><span
+                class="radio-circulo"
+              ></span
+              >Intermediate
+            </label>
+          </div>
+          <div class="box">
+            <label class="radio-personalizado">
+              <input type="radio" name="difficult" value="advanced" /><span
+                class="radio-circulo"
+              ></span
+              >Advanced
+            </label>
+          </div>
+        </section>
+        <div>
+          <button class="confirm">OK</button>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+
+    <footer>
+      <img
+        class="colaborativa-logo"
+        src="../media/LaColaborativa-Logo_white.png"
+        alt="LaColaborativa-Logo_white"
+      />
+      <hr />
+      <section class="links">
+        <a class="about-us-help" href="#">ABOUT US</a>
+        <hr />
+        <a class="about-us-help" href="#">HELP</a>
+      </section>
+      <hr />
+      <section class="all-logos">
+        <a
+          href="https://www.facebook.com/lacolaborativadechelsea/"
+          target="_blank"
+          ><img
+            class="logo"
+            src="../media/icons8-facebook-logo-50.svg"
+            alt="Facebook logo"
+        /></a>
+
+        <a
+          href="https://www.instagram.com/la_colaborativa/?hl=en"
+          target="_blank"
+          ><img
+            class="logo"
+            src="../media/icons8-instagram-logo.svg"
+            alt="Instagram logo"
+        /></a>
+
+        <a
+          href="https://www.linkedin.com/company/la-colaborativa#:~:text=Levantando%20al%20pueblo%20~%20Lifting%20people%20up%20%7C,Chelsea%2C%20East%20Boston%2C%20Everett%2C%20Lynn%2C%20Revere%2C%20and%20Malden."
+          target="_blank"
+        >
+          <img
+            class="logo"
+            src="../media/icons8-instagram-logo.png"
+            alt="Linkedin logo"
+        /></a>
+      </section>
+      <p class="last-text">© 2025 La Colaborativa. All rights reserved.</p>
+    </footer>
+
+    <script src="activities.js"></script>
+  </body>
+</html>
