@@ -260,10 +260,6 @@ html:has(.modal-abierto) {
   overflow: hidden;
 }
 
-body:has(.modal-abierto) {
-  overflow: hidden;
-}
-
 .header {
   display: flex;
   width: 100%;
