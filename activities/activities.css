@@ -229,23 +229,35 @@ footer hr {
 }
 
 .modal {
+  background-color: #fff;
   width: 21.0625rem;
   height: 18.4375rem;
-  background-color: #fff;
   border-radius: 25px;
   position: fixed;
-  left: 2.5rem;
-  top: 24.3125rem;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  z-index: -5;
   padding: 20px 20px;
   gap: 10px;
+  /* z-index: -5; */
+  pointer-events: none;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.modal.modal-abierto {
+  z-index: 10;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  /* transition: opacity 3s ease-out; */
+}
+
+html:has(.modal-abierto) {
+  overflow: hidden;
 }
 
 .header {
@@ -254,6 +266,7 @@ footer hr {
   justify-content: space-between;
   align-items: center;
 }
+
 .difficult {
   font-size: 20px;
   margin-left: 6.3125rem;
@@ -337,10 +350,6 @@ label {
 
 .hidden {
   display: none;
-}
-
-.bloquear-scroll {
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {

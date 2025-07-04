@@ -106,21 +106,29 @@ const difficult = document.querySelector(".modal");
 const closeDifficult = document.querySelector(".close-window");
 const overlay = document.querySelector(".overlay");
 
+// function animar()
+
 function openWindow() {
-  difficult.style.opacity = "100%";
-  difficult.style.zIndex = "10";
+  // difficult.classList.remove("modal");
+  // difficult.style.opacity = "1";
+  difficult.classList.add("modal-abierto");
   overlay.classList.toggle("hidden");
-  document.querySelector("body").classList.add("bloquear-scroll");
+  // difficult.stytle.zIndex = "10";
 }
 
 function closeWindow() {
+  // difficult.style.opacity = "0";
   overlay.classList.toggle("hidden");
-  difficult.style.opacity = "0";
-  document.querySelector("body").classList.remove("bloquear-scroll");
+  difficult.classList.remove("modal-abierto");
+  // difficult.style.zIndex = "0";
+  // difficult.classList.add("modal");
+  // difficult.style.opacity = "0";
 
-  setTimeout(() => {
-    difficult.style.zIndex = "-5";
-  }, 600);
+  // requestAnimationFrame(opacity);
+
+  // setTimeout(() => {
+  // difficult.style.zIndex = "-5";
+  // }, 600);
 }
 
 verbToBe.addEventListener("click", openWindow);
