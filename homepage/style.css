@@ -6,12 +6,24 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(to right, #fff3b5);
+  background: none;
   display: flex;
   flex-flow: column;
   align-items: center;
   font-size: 16px;
   position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff3b5;
+  z-index: -1;
+  pointer-events: none;
 }
 
 main {
