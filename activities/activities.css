@@ -260,6 +260,10 @@ html:has(.modal-abierto) {
   overflow: hidden;
 }
 
+body:has(.modal-abierto) {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   width: 100%;
@@ -462,7 +466,7 @@ label {
   }
 
   .all-sections {
-    margin-top: 30px;
+    margin-top: 10px;
     flex-flow: row;
     gap: 38px;
     flex-wrap: wrap;
