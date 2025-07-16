@@ -1,5 +1,6 @@
 "use strict";
 
+//     LANGUAGE:
 const language = document.querySelector(".language-selector");
 const english = document.querySelector(".selected");
 const spanish = document.querySelector(".option");
@@ -96,43 +97,52 @@ document.addEventListener("click", (e) => {
 
 spanish.addEventListener("click", switchlanguages);
 
-//modal-window
+//   SECTION   POLICIES:
 
-const greetings = document.querySelector(".greetings");
-const professions = document.querySelector(".professions");
-const family = document.querySelector(".family");
-const verbToBe = document.querySelector(".to-be");
-const difficult = document.querySelector(".modal");
-const closeDifficult = document.querySelector(".close-window");
-const overlay = document.querySelector(".overlay");
+const desliz = document.querySelectorAll(".scroll");
 
-// function animar()
+for (const lines of desliz) {
+  const text = lines.querySelector(".animation");
+  const arrowUp = lines.querySelector(".arrow-up");
+  const arrowDown = lines.querySelector(".arrow-down");
+  const h4 = lines.querySelector(".h4");
 
-function openWindow() {
-  difficult.classList.add("modal-abierto");
-  overlay.classList.toggle("hidden");
-}
-
-function closeWindow() {
-  overlay.classList.toggle("hidden");
-  difficult.classList.remove("modal-abierto");
-}
-
-verbToBe.addEventListener("click", openWindow);
-closeDifficult.addEventListener("click", closeWindow);
-overlay.addEventListener("click", closeWindow);
-
-// Autocompletado
-
-const input = document.getElementById("input");
-const lista = document.querySelectorAll(".topics");
-
-input.addEventListener("input", function () {
-  const text = input.value.toLocaleLowerCase().trim();
-
-  lista.forEach((section) => {
-    const contenido = section.textContent.toLocaleLowerCase();
-    const coincide = contenido.includes(text);
-    section.style.display = coincide ? "flex" : "none";
+  lines.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (!arrowDown.classList.contains("hidden")) {
+      arrowDown.classList.toggle("hidden");
+      arrowUp.classList.toggle("hidden");
+      // text.classList.toggle("visible");
+      text.style.height = text.scrollHeight + "px";
+      // text.style.height = "auto";
+      setTimeout(() => {
+        text.style.opacity = "1";
+      }, 250);
+    } else if (!arrowUp.classList.contains("hidden")) {
+      e.stopPropagation();
+      text.style.height = text.scrollHeight + "px";
+      arrowDown.classList.toggle("hidden");
+      arrowUp.classList.toggle("hidden");
+      requestAnimationFrame(() => {
+        text.style.opacity = "0";
+        setTimeout(() => {
+          text.style.height = "0";
+        }, 100);
+      });
+    }
   });
-});
+
+  document.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (!lines.contains(e.target) && arrowDown.classList.contains("hidden")) {
+      arrowDown.classList.remove("hidden");
+      arrowUp.classList.add("hidden");
+      requestAnimationFrame(() => {
+        text.style.opacity = "0";
+        setTimeout(() => {
+          text.style.height = "0";
+        }, 100);
+      });
+    }
+  });
+}
