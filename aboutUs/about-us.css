@@ -637,6 +637,7 @@ footer hr {
     position: relative;
     bottom: 6.2rem;
     border: none;
+    box-shadow: none;
   }
 
   .img {
