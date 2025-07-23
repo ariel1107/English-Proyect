@@ -129,6 +129,10 @@ main {
   margin-top: 1.75rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .all-rows {
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +155,9 @@ main {
 }
 
 .topics {
-  display: block;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
   width: 9.875rem;
   height: 10.39125rem;
   border-radius: 11px;

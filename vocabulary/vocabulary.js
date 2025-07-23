@@ -1,27 +1,16 @@
 "use strict";
 
 const input = document.getElementById("input");
-const topics = document.querySelectorAll(".topics");
+const links = document.querySelectorAll(".all-rows a");
 
 input.addEventListener("input", function () {
   const text = input.value.toLowerCase().trim();
 
-  topics.forEach((topic) => {
-    const contenido = topic.textContent.toLowerCase();
-    if (contenido.includes(text)) {
-      topic.style.display = "flex";
-      topic.style.flexFlow = "column";
-    } else {
-      topic.style.display = "none";
-    }
+  links.forEach((link) => {
+    const contenido = link.textContent.toLowerCase();
+    link.style.display = contenido.includes(text) ? "flex" : "none";
   });
 });
-
-const calendar = document.querySelector(".calendar");
-
-// calendar.addEventListener("click", function () {
-//   window.location.href = "../vocabulary-page/vocabularyPage.html";
-// });
 
 //     LANGUAGE:
 const language = document.querySelector(".language-selector");
