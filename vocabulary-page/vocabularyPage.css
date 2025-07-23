@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: none;
+  font-family: "inter", sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 5.5625rem;
+  background-color: #ff9245;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.home {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+
+.arrow-back {
+  width: 2.625rem;
+  height: 2.625rem;
+}
+
+header h2 {
+  font-size: 1.875rem;
+  color: #fff;
+}
+
+.language-selector {
+  width: 5.4375rem;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 5.4375rem;
+  height: 2.125rem;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
+
+.audio {
+  width: 2.3125rem;
+  height: 2.3125rem;
+}
+
+.option {
+  position: absolute;
+  bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.flag {
+  width: 1.6875rem;
+  height: 1.6875rem;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  margin-top: 1.8125rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #006770;
+}
+
+.enunciado {
+  display: flex;
+  margin-top: 2.9375rem;
+  gap: 13px;
+  align-items: center;
+}
+
+.enunciado p {
+  color: rgba(0, 0, 0, 0.59);
+}
+
+.head {
+  display: flex;
+  flex-flow: column;
+  padding: 0 29px;
+}
+
+.fila {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.875rem;
+}
+
+.fila p {
+  font-size: 0.8125rem;
+  color: #606161;
+}
+
+.principal {
+  display: flex;
+  flex-flow: column;
+  margin-top: 0.625rem;
+  gap: 0.5rem;
+  padding: 0 7px;
+}
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff9f5;
+  align-items: center;
+  padding: 7px 30px;
+}
+
+.table p {
+  font-size: 1.0625rem;
+}
+
+.english {
+  width: 33%;
+}
+
+.spanish {
+  display: flex;
+  width: 33%;
+}
+
+footer {
+  background-color: #00464d;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0;
+  gap: 1.125rem;
+  min-width: 100%;
+  margin-top: 3.125rem;
+}
+
+footer hr {
+  border-color: #fff;
+  width: 100%;
+}
+
+.footer-links {
+  margin-left: 19px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.colaborativa-logo {
+  width: 12.9275rem;
+  height: 3.625rem;
+  margin-bottom: 22px;
+}
+
+.links {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 14px;
+  min-width: 100%;
+}
+
+.all-logos {
+  display: flex;
+  align-items: center;
+  margin-top: 33px;
+  gap: 2.1875rem;
+}
+
+.logo {
+  height: 3rem;
+  margin: 33px 0;
+}
+
+.last-text {
+  margin-top: 32px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 16px;
+}
