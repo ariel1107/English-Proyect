@@ -140,7 +140,7 @@ a {
   width: 23rem;
   padding: 0 12px;
   margin-top: 1.5rem;
-  gap: 1.4rem;
+  justify-content: space-between;
 }
 
 .image {
@@ -164,6 +164,7 @@ a {
   border-radius: 11px;
   box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.09);
   padding: 10px 7px 16px 11px;
+  margin-bottom: 1.5rem;
 }
 
 .foto {

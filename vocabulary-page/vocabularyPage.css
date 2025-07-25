@@ -109,6 +109,7 @@ h5 {
   display: flex;
   justify-content: space-between;
   margin-top: 1.875rem;
+  padding: 0 5px;
 }
 
 .fila p {

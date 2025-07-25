@@ -96,3 +96,53 @@ document.addEventListener("click", (e) => {
 });
 
 spanish.addEventListener("click", switchlanguages);
+
+//                        AUDIO:
+
+//   Audio en los enunciados:
+
+const enunciados = document.querySelectorAll(".enunciado");
+
+enunciados.forEach((enunciado) => {
+  const audio = enunciado.querySelector(".audio");
+  audio.addEventListener("click", function () {
+    const text = enunciado.querySelector("h3").textContent;
+
+    const voz = new SpeechSynthesisUtterance(text);
+    voz.lang = "en-US";
+
+    voz.rate = 0.3;
+    voz.pitch = 1;
+    voz.volume = 1;
+
+    speechSynthesis.speak(voz);
+  });
+});
+
+//                   Audio en la tabla.
+const rows = document.querySelectorAll(".table");
+
+rows.forEach((row) => {
+  const play = row.querySelector(".audio");
+  const pause = row.querySelector(".hidden");
+
+  play.addEventListener("click", function () {
+    const text = row.querySelector(".text-audio").textContent;
+
+    const voz = new SpeechSynthesisUtterance(text);
+    voz.lang = "en-US";
+
+    voz.rate = 0.3;
+    voz.pitch = 1;
+    voz.volume = 1;
+
+    speechSynthesis.speak(voz);
+
+    play.classList.add("hidden");
+    pause.classList.remove("hidden");
+    setTimeout(() => {
+      play.classList.remove("hidden");
+      pause.classList.add("hidden");
+    }, 1500);
+  });
+});
