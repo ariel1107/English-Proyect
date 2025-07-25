@@ -66,6 +66,7 @@ h1 {
 .flag {
   width: 1.6875rem;
   height: 1.6875rem;
+  border-radius: 80px;
 }
 
 main {
@@ -142,6 +143,7 @@ h3 {
 .photo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 ul {

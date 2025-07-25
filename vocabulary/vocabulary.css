@@ -66,6 +66,7 @@ h2 {
 .flag {
   width: 1.6875rem;
   height: 1.6875rem;
+  border-radius: 80px;
 }
 
 .hidden {
@@ -116,8 +117,8 @@ main {
 }
 
 .search-icon {
-  width: 1.125rem;
-  height: 1.09625rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .text {

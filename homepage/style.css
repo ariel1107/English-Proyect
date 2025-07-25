@@ -23,6 +23,7 @@ main {
 .flag {
   width: 1.6875rem;
   height: 1.6875rem;
+  border-radius: 80px;
 }
 
 header {

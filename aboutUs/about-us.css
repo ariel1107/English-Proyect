@@ -66,6 +66,7 @@ h1 {
 .flag {
   width: 1.6875rem;
   height: 1.6875rem;
+  border-radius: 80px;
 }
 
 main {
@@ -239,18 +240,19 @@ h2 {
 .policies-section p {
   font-size: 0.9375rem;
   margin-top: 0.4375rem;
+  width: 100%;
 }
 
 .arrow-down {
-  width: 1.1875rem;
-  height: 0.7325rem;
+  width: 2.375rem;
+  height: 2.375rem;
   margin-right: 22px;
   cursor: pointer;
 }
 
 .arrow-up {
-  width: 1.1875rem;
-  height: 0.7325rem;
+  width: 2.375rem;
+  height: 2.375rem;
   margin-right: 22px;
   cursor: pointer;
 }
@@ -267,6 +269,7 @@ hr {
 .list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 0.5rem;
 }
 
@@ -303,6 +306,7 @@ ul li::before {
 
 .scroll {
   cursor: pointer;
+  /* width: 100%; */
 }
 
 .teachers {
