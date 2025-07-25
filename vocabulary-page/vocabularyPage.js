@@ -111,11 +111,18 @@ enunciados.forEach((enunciado) => {
     const voz = new SpeechSynthesisUtterance(text);
     voz.lang = "en-US";
 
-    voz.rate = 0.3;
+    voz.rate = 0.4;
     voz.pitch = 1;
     voz.volume = 1;
 
     speechSynthesis.speak(voz);
+
+    play.classList.add("hidden");
+    pause.classList.remove("hidden");
+    setTimeout(() => {
+      play.classList.remove("hidden");
+      pause.classList.add("hidden");
+    }, 1200);
   });
 });
 
@@ -132,7 +139,7 @@ rows.forEach((row) => {
     const voz = new SpeechSynthesisUtterance(text);
     voz.lang = "en-US";
 
-    voz.rate = 0.3;
+    voz.rate = 0.4;
     voz.pitch = 1;
     voz.volume = 1;
 
@@ -143,6 +150,6 @@ rows.forEach((row) => {
     setTimeout(() => {
       play.classList.remove("hidden");
       pause.classList.add("hidden");
-    }, 1500);
+    }, 1200);
   });
 });
