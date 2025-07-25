@@ -104,8 +104,10 @@ spanish.addEventListener("click", switchlanguages);
 const enunciados = document.querySelectorAll(".enunciado");
 
 enunciados.forEach((enunciado) => {
-  const audio = enunciado.querySelector(".audio");
-  audio.addEventListener("click", function () {
+  const play = enunciado.querySelector(".audio");
+  const pause = enunciado.querySelector(".hidden");
+
+  play.addEventListener("click", function () {
     const text = enunciado.querySelector("h3").textContent;
 
     const voz = new SpeechSynthesisUtterance(text);
