@@ -350,9 +350,9 @@ footer hr {
   .all-rows {
     width: 100%;
     padding: 0 130px;
-    margin-top: 3.75rem;
+    margin-top: 4.4375rem;
     justify-content: flex-start;
-    column-gap: 4vw;
+    column-gap: 2vw;
     row-gap: 2rem;
   }
 
