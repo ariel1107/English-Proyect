@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+p,
+h1,
+h3,
+h4,
+h2:hover {
+  cursor: default;
+}
+
 body {
   background: none;
   font-family: "inter", sans-serif;
@@ -161,6 +169,7 @@ h2 {
   display: flex;
   gap: 8px;
   align-items: center;
+  height: 2.8125rem;
 }
 
 .circule-shape {
@@ -306,7 +315,6 @@ ul li::before {
 
 .scroll {
   cursor: pointer;
-  /* width: 100%; */
 }
 
 .teachers {
@@ -531,6 +539,7 @@ footer hr {
     justify-content: center;
     align-items: center;
     width: 6.7rem;
+    height: auto;
     margin-top: 1.625rem;
   }
 

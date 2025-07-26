@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+p,
+h1,
+h3,
+h5,
+h2:hover {
+  cursor: default;
+}
+
 body {
   background: none;
   font-family: "inter", sans-serif;
@@ -357,6 +365,10 @@ footer hr {
     height: 18.25rem;
     border-radius: 21px;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  .topics p:hover {
+    cursor: pointer;
   }
 
   .description {

@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+p,
+h1,
+h3,
+h5,
+h2:hover {
+  cursor: default;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: #fff3b5;

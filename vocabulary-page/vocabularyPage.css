@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+p,
+h1,
+h3,
+h5,
+h2:hover {
+  cursor: default;
+}
+
 body {
   background: none;
   font-family: "inter", sans-serif;
@@ -60,6 +68,10 @@ header h2 {
   border: none;
   cursor: pointer;
   background-color: #f6f6f6;
+}
+
+.audio:hover {
+  cursor: pointer;
 }
 
 .audio {
