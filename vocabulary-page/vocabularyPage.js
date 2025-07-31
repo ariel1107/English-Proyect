@@ -141,7 +141,7 @@ rows.forEach((row) => {
     const voz = new SpeechSynthesisUtterance(text);
     voz.lang = "en-US";
 
-    voz.rate = 0.4;
+    voz.rate = 1;
     voz.pitch = 1;
     voz.volume = 1;
 

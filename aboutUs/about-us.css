@@ -135,17 +135,19 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
-.texto {
-  margin-left: 16px;
-}
-.months {
-  margin-right: 25px;
-}
-.month {
-  margin-right: 68px;
-}
+.texto,
+.months,
+.month,
 .duration {
-  margin-right: 76px;
+  width: 50%;
+}
+
+.texto p,
+.texto h5,
+.duration h5,
+.month p,
+.months p {
+  text-align: center;
 }
 
 .registration-section {
