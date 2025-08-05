@@ -471,8 +471,12 @@ label {
     height: 1.834375rem;
   }
 
+  main {
+    margin-top: 60px;
+  }
+
   .all-sections {
-    margin-top: 10px;
+    margin-top: 0;
     flex-flow: row;
     gap: 38px;
     flex-wrap: wrap;
