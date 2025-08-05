@@ -352,7 +352,7 @@ footer hr {
     padding: 0 26px;
     margin-top: 4rem;
     justify-content: flex-start;
-    column-gap: 2vw;
+    column-gap: 3vw;
     row-gap: 2rem;
   }
 
@@ -361,10 +361,13 @@ footer hr {
   }
 
   .topics {
-    width: 16.875rem;
-    height: 18.25rem;
+    /* width: 16.875rem; */
+    /* height: 18.25rem; */
+    width: 16rem;
+    height: 17rem;
     border-radius: 21px;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.15);
+    padding: 10px 15px 16px 11px;
   }
 
   .topics p:hover {
@@ -375,14 +378,24 @@ footer hr {
     padding: 20px 19px;
   }
 
-  .description p {
+  /* .description p {
     font-size: 1.75rem;
+    font-weight: bold;
+  } */
+
+  .description p {
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
-  .image {
+  /* .image {
     width: 8rem;
     height: 8rem;
+  } */
+
+  .image {
+    width: 6rem;
+    height: 6rem;
   }
 
   footer {
