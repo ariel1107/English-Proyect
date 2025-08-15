@@ -83,7 +83,7 @@ function updateButton() {
 
 button.addEventListener("click", function () {
   if (!button.disabled) {
-    const proceed = confirm("Are you sure you want to go to the next exercise");
+    const proceed = confirm("Excellent 🏅🏅!! Next exercise?");
     if (proceed) {
       document.querySelector(".exercise-1").style.display = "none";
       document.querySelector(".exercise-2").style.display = "block";
@@ -181,7 +181,7 @@ dropzone.forEach((item) => {
 //         boton
 document.querySelector(".boton-2").addEventListener("click", () => {
   if ([...dropzone].every((item) => item.classList.contains("dragged"))) {
-    const proceed = confirm("Are you sure you want to go to the next exercise");
+    const proceed = confirm("Excellent job!!🏅🏅 Next exercise?");
     if (proceed) {
       document.querySelector(".exercise-2").style.display = "none";
       document.querySelector(".exercise-3").style.display = "block";
@@ -375,7 +375,7 @@ document.querySelector(".boton-5").addEventListener("click", () => {
     const proceed = confirm("Great job!! next exercise?");
     if (proceed) {
       document.querySelector(".exercise-5").style.display = "none";
-      document.querySelector(".exercise-1").style.display = "block";
+      // document.querySelector(".exercise-1").style.display = "block";
     }
   } else {
     list.forEach((list) => {
