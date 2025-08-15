@@ -477,8 +477,11 @@ label {
 
   .all-sections {
     margin-top: 0;
+    width: 100%;
+    padding: 0 10px 0 60px;
     flex-flow: row;
-    gap: 38px;
+    column-gap: 2.4vw;
+    row-gap: 1.5rem;
     flex-wrap: wrap;
   }
 

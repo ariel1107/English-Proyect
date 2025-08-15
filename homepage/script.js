@@ -6,7 +6,6 @@ const menu = document.querySelector(".navegation");
 const contenedor = document.querySelector(".body");
 
 let visible = false;
-let laguageVisible = false;
 
 function abrirMenu(e) {
   e.stopPropagation();
@@ -46,26 +45,21 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// boton de lenguaje
+//     LANGUAGE:
 const language = document.querySelector(".language-selector");
 const english = document.querySelector(".selected");
 const spanish = document.querySelector(".option");
 const languageList = document.querySelectorAll(".language");
 
-function toggleLanguages() {
-  spanish.classList.toggle("show");
-}
-
-spanish.addEventListener("click", switchlanguages);
+let laguageVisible = false;
 
 function switchlanguages() {
   if (english.classList.contains("default")) {
     english.innerHTML = "";
     const img = document.createElement("img");
-    img.src = "media/icons8-spanish-flag-48.png";
+    img.src = "../media/icons8-spanish-flag-48.png";
     img.alt = "Spanish flag";
-    img.style.width = "1.6875rem";
-    img.style.height = "1.6875";
+    img.classList.add("flag");
     const text = document.createElement("span");
     text.textContent = "ES";
     text.style.fontSize = "16px";
@@ -78,10 +72,9 @@ function switchlanguages() {
 
     spanish.innerHTML = "";
     const imge = document.createElement("img");
-    imge.src = "media/us.svg";
+    imge.src = "../media/us.svg";
     imge.alt = "American flag";
-    imge.style.width = "1.6875rem";
-    imge.style.height = "1.6875rem";
+    imge.classList.add("flag");
     const texto = document.createElement("span");
     texto.textContent = "EN";
     texto.style.fontSize = "16px";
@@ -90,10 +83,9 @@ function switchlanguages() {
   } else {
     english.innerHTML = "";
     const img = document.createElement("img");
-    img.src = "media/us.svg";
+    img.src = "../media/us.svg";
     img.alt = "American flag";
-    img.style.width = "1.6875rem";
-    img.style.height = "1.6875";
+    img.classList.add("flag");
     const text = document.createElement("span");
     text.textContent = "EN";
     text.style.fontSize = "16px";
@@ -106,10 +98,9 @@ function switchlanguages() {
 
     spanish.innerHTML = "";
     const imge = document.createElement("img");
-    imge.src = "media/icons8-spanish-flag-48.png";
+    imge.src = "../media/icons8-spanish-flag-48.png";
     imge.alt = "Spanish Flag";
-    imge.style.width = "1.6875rem";
-    imge.style.height = "1.6875rem";
+    imge.classList.add("flag");
     const texto = document.createElement("span");
     texto.textContent = "ES";
     texto.style.fontSize = "16px";
@@ -124,7 +115,7 @@ function switchlanguages() {
   }
 }
 
-// english.addEventListener ("click", englishFunction);
+// english.addEventListener
 
 english.addEventListener("click", function (e) {
   e.stopPropagation();
@@ -144,3 +135,5 @@ document.addEventListener("click", (e) => {
     spanish.classList.add("hidden");
   }
 });
+
+spanish.addEventListener("click", switchlanguages);

@@ -1,7 +1,5 @@
 "use strict";
 
-"use strict";
-
 //     LANGUAGE:
 const language = document.querySelector(".language-selector");
 const english = document.querySelector(".selected");
@@ -16,8 +14,7 @@ function switchlanguages() {
     const img = document.createElement("img");
     img.src = "../media/icons8-spanish-flag-48.png";
     img.alt = "Spanish flag";
-    img.style.width = "1.6875rem";
-    img.style.height = "1.6875rem";
+    img.classList.add("flag");
     const text = document.createElement("span");
     text.textContent = "ES";
     text.style.fontSize = "16px";
@@ -32,8 +29,7 @@ function switchlanguages() {
     const imge = document.createElement("img");
     imge.src = "../media/us.svg";
     imge.alt = "American flag";
-    imge.style.width = "1.6875rem";
-    imge.style.height = "1.6875rem";
+    imge.classList.add("flag");
     const texto = document.createElement("span");
     texto.textContent = "EN";
     texto.style.fontSize = "16px";
@@ -44,8 +40,7 @@ function switchlanguages() {
     const img = document.createElement("img");
     img.src = "../media/us.svg";
     img.alt = "American flag";
-    img.style.width = "1.6875rem";
-    img.style.height = "1.6875rem";
+    img.classList.add("flag");
     const text = document.createElement("span");
     text.textContent = "EN";
     text.style.fontSize = "16px";
@@ -60,8 +55,7 @@ function switchlanguages() {
     const imge = document.createElement("img");
     imge.src = "../media/icons8-spanish-flag-48.png";
     imge.alt = "Spanish Flag";
-    imge.style.width = "1.6875rem";
-    imge.style.height = "1.6875rem";
+    imge.classList.add("flag");
     const texto = document.createElement("span");
     texto.textContent = "ES";
     texto.style.fontSize = "16px";
