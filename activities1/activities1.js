@@ -870,7 +870,7 @@ document.querySelector(".try-again").addEventListener("click", () => {
   mistakes.clear();
   preguntasBienRespondidas.splice(0);
   preguntasMalRespondidas.splice(0);
-  document.querySelector(`.exercise-${currentExercise}`).style.display = "none";
+  document.querySelector(".results").style.display = "none";
   UpdateCurrentExercise(previousExercises);
   showNextExercise();
 });
