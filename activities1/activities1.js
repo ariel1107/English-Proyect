@@ -213,7 +213,7 @@ function eventoBoton1y10y6y9(e) {
   if (isAllGood) {
     alert("Excellent!! Next exercise");
 
-    // showNextExercise();
+    showNextExercise();
 
     container.forEach((espacio) => (espacio.style.background = ""));
     palabras.forEach((palabra) => (palabra.style.visibility = "hidden"));
