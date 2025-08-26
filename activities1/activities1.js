@@ -697,6 +697,117 @@ boton4.addEventListener("click", eventoBoton4y6);
 
 // exercise 5.
 
+function logica5y9(e) {
+  const selected = e.currentTarget;
+  const correct = selected.dataset.value;
+  const container = selected.closest(".exercise").querySelectorAll(".words");
+
+  const expected = [
+    ...selected.closest(".exercise").querySelectorAll(".word-text"),
+  ];
+
+  const opciones = selected.closest(".exercise").querySelectorAll(".opt");
+  console.log(opciones);
+
+  console.log(container);
+  console.log(selected);
+  console.log(expected[0]);
+  console.log(correct);
+
+  const indice = [...container].findIndex(
+    (el) => !el.classList.contains("all-set")
+  );
+
+  if (indice === -1) return;
+
+  console.log(indice);
+
+  if (correct === expected[indice].textContent) {
+    // creando clon del objeto seleccionado
+    const clone = selected.cloneNode(true);
+    document.body.appendChild(clone);
+
+    const fromRect = selected.getBoundingClientRect();
+    const toRect = container[indice].getBoundingClientRect();
+
+    // Estilo inicial del clone: Muchos sttilos se pueden escriben asi
+
+    Object.assign(clone.style, {
+      position: "fixed",
+      left: fromRect.left + "px",
+      top: fromRect.top + "px",
+      width: fromRect.width + "px",
+      height: fromRect.height + "px",
+      textAlign: "center",
+      zIndex: 1000,
+      display: "flex",
+      justifyContent: "center",
+      alignItem: "center",
+      margin: 0,
+      border: "none",
+      pointerEvents: "none",
+      transition: "all 0.6s cubic-bezier(1, -0.8, 0.3, 1)",
+    });
+
+    // forzar reflow para que se aplique el estilo antes de ser movido:
+    void clone.offsetWidth;
+
+    // Mover el clone al destino:
+    // clone.style.left = toRect.left + "px";
+    // clone.style.top = toRect.top + "px";
+    clone.style.width = toRect.width + "px";
+    clone.style.height = toRect.height + "px";
+
+    //  mas animacion:
+    // lo quite porque no me gusto en este caso pero tenerlo en cuenta:
+
+    // ----------------------------------
+    const deltaX = toRect.left - fromRect.left;
+    const deltaY = toRect.top - fromRect.top;
+
+    clone.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.3)`;
+
+    // llamar otra animacion del css:
+    // setTimeout(
+    //   () => (clone.style.animation = "bounce-in 0.3s ease-out forwards"),
+    //   600
+    // );
+
+    setTimeout(() => {
+      clone.remove();
+
+      container[indice].style.backgroundColor = "lightgreen";
+      container[indice].classList.add("all-set");
+      selected.style.display = "none";
+      expected[indice].style.visibility = "visible";
+
+      if ([...container].every((el) => el.classList.contains("all-set"))) {
+        opciones.forEach((el) => {
+          el.classList.add("all-set");
+          el.style.opacity = 0.4;
+          isAllGood = true;
+        });
+      }
+    }, 600);
+
+    return;
+  } else {
+    container[indice].classList.add("wrong");
+    selected.classList.add("wrong");
+
+    setTimeout(() => {
+      container[indice].classList.remove("wrong");
+      selected.classList.remove("wrong");
+    }, 500);
+
+    upgradeMistakes();
+  }
+}
+
+document
+  .querySelectorAll(".opt")
+  .forEach((letter) => letter.addEventListener("click", logica5y9));
+
 document
   .querySelector(".boton-5 button")
   .addEventListener("click", eventoBoton1y10y6y9);
@@ -737,6 +848,10 @@ document
 //--------------------------------------------------
 
 //               exercise 9.
+
+document
+  .querySelectorAll(".lista-opciones")
+  .forEach((el) => el.addEventListener("click", logica5y9));
 
 document
   .querySelector(".boton-9 button")

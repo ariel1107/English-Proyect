@@ -15,7 +15,7 @@
   </head>
   <body>
     <header>
-      <!-- <div class="enunciado hidden">
+      <div class="head-header hidden">
         <div class="logo-principal">
           <a href="../index.html">
             <img
@@ -31,28 +31,30 @@
           <a class="header-text" href="../help/help.html">Help</a>
           <a class="header-text" href="../aboutUs/about-us.html">About Us</a>
         </nav>
-      </div> -->
-
-      <div class="go-back">
-        <a href="../activities/activities.html"
-          ><img
-            class="arrow-back"
-            src="../media/arrow_circle_left_45dp_FFF_FILL0_wght400_GRAD0_opsz48.svg"
-            alt="Arrow back"
-        /></a>
       </div>
 
-      <div class="header-text2">
-        <h2 class="activities-text">Activities</h2>
-      </div>
+      <div class="head-header-2">
+        <div class="go-back">
+          <a href="../activities/activities.html"
+            ><img
+              class="arrow-back"
+              src="../media/arrow_circle_left_45dp_FFF_FILL0_wght400_GRAD0_opsz48.svg"
+              alt="Arrow back"
+          /></a>
+        </div>
 
-      <div class="go-home">
-        <a href="../index.html">
-          <img
-            src="../media/home_37dp_FFFFFF_FILL1_wght400_GRAD0_opsz40.svg"
-            alt="home"
-            class="home"
-        /></a>
+        <div class="header-text2">
+          <h2 class="activities-text">Activities</h2>
+        </div>
+
+        <div class="go-home">
+          <a href="../index.html">
+            <img
+              src="../media/home_37dp_FFFFFF_FILL1_wght400_GRAD0_opsz40.svg"
+              alt="home"
+              class="home"
+          /></a>
+        </div>
       </div>
     </header>
 
@@ -66,44 +68,48 @@
             <p>Practice English greetngs in 10 fun activities!</p>
           </div>
 
-          <div class="foto-principal">
-            <img
-              src="../media/Greetings.svg"
-              alt="two guys greeting to each other"
-              class="saludo"
-            />
-          </div>
+          <section class="big-container">
+            <div class="foto-principal">
+              <img
+                src="../media/Greetings.svg"
+                alt="two guys greeting to each other"
+                class="saludo"
+              />
+            </div>
 
-          <div class="explicacion">
-            <p class="color">10 Dynamic Exercises</p>
-            <p>Learn how to greet and say goodbye step by step.</p>
-          </div>
+            <div class="right">
+              <div class="explicacion">
+                <p class="color">10 Dynamic Exercises</p>
+                <p>Learn how to greet and say goodbye step by step.</p>
+              </div>
 
-          <div class="boton boton-0">
-            <button>Start Activities</button>
-          </div>
+              <div class="boton boton-0">
+                <button>Start Activities</button>
+              </div>
 
-          <div class="ultimas-palabras">
-            Ready? Lets begin your first conversation in English.
-          </div>
+              <div class="ultimas-palabras">
+                Ready? Lets begin your first conversation in English.
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
       <!-- --------------------------------------------- -->
       <section class="exercise-1 hidden">
         <div class="exercise">
-          <section class="scroll">
-            <div class="enunciado">
-              <span class="number"
-                ><span class="number-value">1</span> of 10</span
-              >
-              <p>
-                Drag the correct Greeting words to complete the following
-                conversation:
-              </p>
-            </div>
+          <div class="enunciado">
+            <span class="number"
+              ><span class="number-value">1</span> of 10</span
+            >
+            <p>
+              Drag the correct Greeting words to complete the following
+              conversation:
+            </p>
+          </div>
 
-            <section class="dialogo">
+          <section class="aside">
+            <div class="dialogo">
               <div class="woman">
                 <div class="imagen">
                   <img
@@ -253,35 +259,41 @@
                   >.
                 </div>
               </div>
+            </div>
+
+            <hr />
+
+            <section class="list-of-words">
+              <div draggable="true" class="option" data-value="Goodbye">
+                Goodbye
+              </div>
+
+              <div draggable="true" class="option" data-value="How are you?">
+                How are you?
+              </div>
+
+              <div draggable="true" class="option" data-value="Hello">
+                Hello
+              </div>
+
+              <div draggable="true" class="option" data-value="Have a good day">
+                Have a good day
+              </div>
+
+              <div draggable="true" class="option" data-value="I'm doing well">
+                I'm doing well
+              </div>
+
+              <div draggable="true" class="option" data-value="Hi">Hi</div>
+
+              <div
+                draggable="true"
+                class="option"
+                data-value="Nice to meet you"
+              >
+                Nice to meet you
+              </div>
             </section>
-          </section>
-
-          <hr />
-
-          <section class="list-of-words">
-            <div draggable="true" class="option" data-value="Goodbye">
-              Goodbye
-            </div>
-
-            <div draggable="true" class="option" data-value="How are you?">
-              How are you?
-            </div>
-
-            <div draggable="true" class="option" data-value="Hello">Hello</div>
-
-            <div draggable="true" class="option" data-value="Have a good day">
-              Have a good day
-            </div>
-
-            <div draggable="true" class="option" data-value="I'm doing well">
-              I'm doing well
-            </div>
-
-            <div draggable="true" class="option" data-value="Hi">Hi</div>
-
-            <div draggable="true" class="option" data-value="Nice to meet you">
-              Nice to meet you
-            </div>
           </section>
 
           <div class="boton boton-1">
@@ -298,8 +310,6 @@
       </section>
 
       <!-- --------------------------------------------- -->
-
-      <!-- Falta:  cambiar la animacion a shake para los erroneos. -->
 
       <section class="exercise-2 hidden">
         <div class="exercise">
@@ -728,14 +738,16 @@
             </div>
 
             <div class="ejercicio">
-              <span class="word square"
+              <span class="word square words"
                 ><span class="word-text">Nice</span></span
               >
-              <span class="word square"><span class="word-text">to</span></span>
-              <span class="word square"
+              <span class="word square words"
+                ><span class="word-text">to</span></span
+              >
+              <span class="word square words"
                 ><span class="word-text">meet</span></span
               >
-              <span class="word square"
+              <span class="word square words"
                 ><span class="word-text">you!</span></span
               >
             </div>
@@ -743,7 +755,7 @@
             <section class="list-of-opt">
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="i"
               >
                 I
@@ -751,7 +763,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="to"
               >
                 to
@@ -759,7 +771,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="o"
               >
                 day
@@ -767,7 +779,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="d"
               >
                 the
@@ -775,7 +787,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="e"
               >
                 of
@@ -783,7 +795,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="you!"
               >
                 you!
@@ -791,7 +803,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="y"
               >
                 have
@@ -799,7 +811,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="meet"
               >
                 meet
@@ -807,7 +819,7 @@
 
               <div
                 draggable="true"
-                class="option lista-opciones"
+                class="option opt lista-opciones"
                 data-value="Nice"
               >
                 Nice
@@ -832,22 +844,18 @@
 
       <section class="exercise-10 hidden">
         <div class="exercise">
-          <section class="scroll">
-            <div class="head">
-              <h1>Greetings/Goodbyes</h1>
-            </div>
+          <div class="enunciado">
+            <span class="number"
+              ><span class="number-value">10</span> of 10</span
+            >
+            <p>
+              Drag the correct Greeting words to complete the following
+              conversation:
+            </p>
+          </div>
 
-            <div class="enunciado">
-              <span class="number"
-                ><span class="number-value">1</span> of 10</span
-              >
-              <p>
-                Drag the correct Greeting words to complete the following
-                conversation:
-              </p>
-            </div>
-
-            <section class="dialogo">
+          <section class="aside">
+            <div class="dialogo">
               <div class="woman">
                 <div class="imagen">
                   <img
@@ -997,35 +1005,41 @@
                   >.
                 </div>
               </div>
+            </div>
+
+            <hr />
+
+            <section class="list-of-words">
+              <div draggable="true" class="option" data-value="Goodbye">
+                Goodbye
+              </div>
+
+              <div draggable="true" class="option" data-value="How are you?">
+                How are you?
+              </div>
+
+              <div draggable="true" class="option" data-value="Hello">
+                Hello
+              </div>
+
+              <div draggable="true" class="option" data-value="Have a good day">
+                Have a good day
+              </div>
+
+              <div draggable="true" class="option" data-value="I'm doing well">
+                I'm doing well
+              </div>
+
+              <div draggable="true" class="option" data-value="Hi">Hi</div>
+
+              <div
+                draggable="true"
+                class="option"
+                data-value="Nice to meet you"
+              >
+                Nice to meet you
+              </div>
             </section>
-          </section>
-
-          <hr />
-
-          <section class="list-of-words">
-            <div draggable="true" class="option" data-value="Goodbye">
-              Goodbye
-            </div>
-
-            <div draggable="true" class="option" data-value="How are you?">
-              How are you?
-            </div>
-
-            <div draggable="true" class="option" data-value="Hello">Hello</div>
-
-            <div draggable="true" class="option" data-value="Have a good day">
-              Have a good day
-            </div>
-
-            <div draggable="true" class="option" data-value="I'm doing well">
-              I'm doing well
-            </div>
-
-            <div draggable="true" class="option" data-value="Hi">Hi</div>
-
-            <div draggable="true" class="option" data-value="Nice to meet you">
-              Nice to meet you
-            </div>
           </section>
 
           <div class="boton boton-10">

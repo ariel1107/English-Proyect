@@ -74,6 +74,9 @@ h3 {
 }
 
 .foto-principal {
+  display: flex;
+  width: 100%;
+  justify-content: center;
   margin-top: 1.875rem;
   height: fit-content;
 }
@@ -82,6 +85,12 @@ h3 {
   width: 15.375rem;
   height: 14.6875rem;
   border-radius: 20px;
+}
+
+.right {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .explicacion {
@@ -151,16 +160,13 @@ h1 {
   color: #ff9245;
 }
 
-.scroll {
-  height: 17rem;
-  overflow: scroll;
-}
-
 .dialogo {
   display: flex;
   flex-flow: column;
   padding: 0 26px;
-  gap: 10px;
+  gap: 2px;
+  height: 18rem;
+  overflow: scroll;
 }
 
 .dialogo img {
@@ -604,9 +610,21 @@ button:active {
   display: flex;
   justify-content: center;
   width: 3rem;
-  user-select: all;
+  user-select: none;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
   cursor: grab;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(1.3) rotate(10deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .ejercicio {
@@ -622,7 +640,7 @@ button:active {
   width: 2.8rem;
   justify-content: center;
   position: relative;
-  transition: background-color 0.3s ease;
+  transition: background 0.4s ease;
 }
 
 /* --------------------------------------------- */
@@ -677,24 +695,11 @@ button:active {
 }
 
 .lista-opciones {
-  border: 2px solid #ff9245;
-  padding: 4px 10px;
-  border-radius: 10px;
-  font-size: 1.125rem;
-  user-select: all;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
-  cursor: grab;
+  width: auto;
 }
 
 .square {
-  border: 1px solid #d9d9d9;
-  border-radius: 10px;
-  display: flex;
-  padding: 5px 10px;
   width: 3.4rem;
-  justify-content: center;
-  position: relative;
-  transition: background-color 0.3s ease;
 }
 
 /* ------------------------------------------------ */
@@ -931,4 +936,494 @@ footer hr {
 
 .hidden {
   display: none;
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-flow: column;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.1) 95%
+      ),
+      url(../media/activities-header.jpg);
+    width: 100%;
+    height: 12.5rem;
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    text-align: center;
+    justify-content: right;
+    padding: 30px 30px;
+    margin: 0;
+    gap: 40px;
+    box-shadow: 0 8px 20px -2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3rem;
+  }
+
+  .head-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .head-header-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo-principal {
+    max-width: 9.375rem;
+    max-height: 2.625rem;
+  }
+
+  .header-links {
+    display: flex;
+    align-items: start;
+    gap: 2.25rem;
+  }
+
+  .header-text {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: medium;
+    text-decoration: none;
+    letter-spacing: 4%;
+  }
+
+  .header-text:hover {
+    text-decoration: underline;
+    color: #92d6d7;
+  }
+
+  .symbol {
+    display: flex;
+  }
+
+  .header-text2 {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .head-header-2 h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .principio h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #006770;
+    margin-bottom: 0.8125rem;
+  }
+
+  .principio p {
+    font-size: 1.375rem;
+    line-height: 25px;
+  }
+
+  .explicacion {
+    width: 26rem;
+    height: 8.875rem;
+    padding: 30px 60px;
+  }
+
+  .ultimas-palabras {
+    width: 27.6875rem;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .big-container {
+    display: flex;
+    gap: 3.8rem;
+  }
+
+  .saludo {
+    width: 24.375rem;
+    height: 23.3125rem;
+    border-radius: 20px;
+  }
+
+  .right {
+    justify-content: center;
+  }
+
+  /* ------------------------------------------------ */
+
+  /* exercise 1. */
+
+  .exercise {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .aside {
+    display: flex;
+    width: 100%;
+    /* justify-content: space-around; */
+  }
+
+  .dialogo {
+    gap: 5px;
+    width: 90%;
+    /* align-items: center; */
+    padding-left: 230px;
+    height: auto;
+    overflow: visible;
+    border-right: 2px solid #00ac98;
+  }
+
+  .exercise-1 hr {
+    display: none;
+  }
+
+  .exercise-1 .enunciado {
+    transform: translateX(-25%);
+  }
+
+  .list-of-words {
+    width: 30%;
+    height: 100%;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 4rem;
+  }
+
+  .option {
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .boton {
+    margin-top: 3rem;
+    justify-content: flex-end;
+    transform: translateX(-20%);
+  }
+
+  button {
+    width: 11.8125rem;
+    height: 3.25rem;
+  }
+
+  /* ------------------------------------------------ */
+
+  /* exercise 2. */
+
+  .principal {
+    gap: 8.6875rem;
+  }
+
+  .exercise-2 .pic {
+    width: 7.6rem;
+    height: 7.25rem;
+    padding: 0 8px;
+  }
+
+  .dropzone {
+    width: 7.6rem;
+    height: 7.25rem;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0 8px;
+  }
+
+  .exercise-2 .enunciado {
+    transform: translateX(-10%);
+  }
+
+  /* --------------------------------------------- */
+
+  /* exercise 3. */
+
+  .exercise-3 .enunciado p {
+    font-size: 1.375rem;
+  }
+
+  .exercise-3 .number {
+    font-size: 1.375rem;
+  }
+
+  .hands {
+    width: 30.4375rem;
+    height: 15.875rem;
+  }
+
+  .exercise .opciones {
+    width: 100%;
+    align-items: center;
+  }
+
+  .exercise .opciones p {
+    font-size: 1.625rem;
+  }
+
+  .exercise-3 label {
+    font-size: 1.4375rem;
+  }
+
+  .circule {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .circule::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .input-radio {
+    transform: translateX(-70%);
+  }
+
+  .boton-3 {
+    transform: translateX(30%);
+  }
+
+  /* ------------------------------------------- */
+
+  /* exercise 4 */
+
+  .exercise-4 .enunciado {
+    transform: translateX(-15%);
+  }
+
+  .enunciado p,
+  span {
+    font-size: 1.375rem;
+  }
+
+  .main-text {
+    margin-top: 3.25rem;
+  }
+
+  .audio {
+    width: 5.856875rem;
+    height: 5.856875rem;
+  }
+
+  .descripcion {
+    font-size: 1.375rem;
+  }
+
+  .exercise-4 .opciones {
+    gap: 0.9375rem;
+  }
+
+  .volumen {
+    width: 3.23125rem;
+    height: 3.23125rem;
+  }
+
+  .row {
+    font-size: 1.375rem;
+    font-weight: 600;
+    width: 29.6875rem;
+    height: 4.25rem;
+  }
+
+  /* -------------------------------------------------- */
+
+  /* exercise 5. */
+
+  .main-picture {
+    width: 26.6875rem;
+    height: 18rem;
+  }
+
+  .exercise-5 .words {
+    width: 4.125rem;
+    min-height: 3.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exercise-5 .list-of-opt {
+    width: 28rem;
+    gap: 1.125rem;
+  }
+
+  .exercise-5 .word-text {
+    font-size: 1.875rem;
+  }
+
+  .exercise-5 .opt {
+    width: 4.5rem;
+    height: 3.25rem;
+    font-size: 1.875rem;
+  }
+  /* --------------------------------------------- */
+
+  /* exercise 6. */
+
+  .exercise-6 .enunciado {
+    transform: translateX(-15%);
+  }
+  .exercise-6 .descripcion {
+    margin-top: 2.125rem;
+  }
+
+  /* ----------------------------------------------- */
+
+  /* exercise 7. */
+
+  .exercise-7 .enunciado {
+    transform: translateX(-25%);
+  }
+
+  .column--2 {
+    gap: 48px;
+  }
+
+  .mayor-width {
+    width: 10rem;
+    height: 6.25rem;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0 8px;
+  }
+
+  /* ------------------------------------------------- */
+
+  /* exercise 8. */
+
+  .friends {
+    width: 33rem;
+    height: 22.4375rem;
+  }
+
+  .exercise-8 label {
+    font-size: 1.375rem;
+  }
+
+  .boton-8 {
+    transform: translateX(20%);
+  }
+
+  /* --------------------------------------------------- */
+
+  /* exercise 9. */
+
+  /* .main-picture {
+    width: 26.6875rem;
+    height: 18rem;
+  }
+
+  .exercise-5 .words {
+    width: 4.125rem;
+    min-height: 3.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exercise-5 .list-of-opt {
+    width: 28rem;
+    gap: 1.125rem;
+  }
+
+  .exercise-5 .word-text {
+    font-size: 1.875rem;
+  }
+
+  .exercise-5 .opt {
+    width: 4.5rem;
+    height: 3.25rem;
+    font-size: 1.875rem;
+  } */
+
+  /* ------------------------------------------------- */
+
+  /* exercise 10. */
+
+  .exercise-10 hr {
+    display: none;
+  }
+
+  .exercise-10 .enunciado {
+    transform: translateX(-15%);
+  }
+
+  /* --------------------------------------------------- */
+
+  /* results */
+
+  /* ----------------------------------------------------- */
+
+  /* footer */
+
+  footer {
+    margin-top: 3rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    text-align: center;
+  }
+  footer hr {
+    display: none;
+  }
+  .colaborativa-logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 45px 45px;
+    justify-self: left;
+  }
+  .links {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: self-start;
+    gap: 1.6rem;
+    margin-top: 45px;
+    padding: 0;
+    font-size: 1.375rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .footer-links {
+    justify-content: center;
+    color: #eee;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+
+  .footer-links:hover {
+    text-decoration: underline;
+  }
+
+  .all-logos {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin: 0;
+    justify-self: end;
+    align-self: center;
+    margin-right: 45px;
+  }
+  .logo {
+    height: 2.448125rem;
+  }
+  .footer-last-text {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .last-text {
+    margin: 0;
+    font-size: 1.375rem;
+  }
 }
