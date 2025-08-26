@@ -23,6 +23,12 @@ header {
   margin-bottom: 1rem;
 }
 
+.head-header-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .header-text2 {
   display: flex;
   justify-content: space-between;
