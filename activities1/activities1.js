@@ -276,7 +276,18 @@ document.querySelectorAll(".word").forEach((slot) => {
       selected.style.display = "none";
       slot.classList.add("all-set");
       const scroll = slot.closest(".dialogo");
-      if (scroll) slot.scrollIntoView({ behavior: "smooth" });
+      if (scroll) {
+        const indice = [...container].findIndex(
+          (slot) => !slot.classList.contains("all-set")
+        );
+
+        if (indice <= 5) {
+          container[indice + 1].scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      }
 
       const container = slot.closest(".exercise").querySelectorAll(".word");
       const allGreen = [...container].every(
@@ -791,10 +802,16 @@ function logica5y9(e, words, opt) {
       clone.remove();
       const scroll = selected.closest(".exercise").querySelector(".dialogo");
       if (scroll) {
-        const elemento = [...container].find(
+        const indice = [...container].findIndex(
           (slot) => !slot.classList.contains("all-set")
         );
-        elemento.scrollIntoView({ behavior: "smooth" });
+
+        if (indice <= 5) {
+          container[indice + 1].scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
       }
 
       container[indice].style.backgroundColor = "lightgreen";

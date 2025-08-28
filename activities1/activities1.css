@@ -253,6 +253,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+.options-list {
+  height: 12.75rem;
+}
+
 .list-of-words {
   display: flex;
   justify-content: center;
@@ -267,6 +271,7 @@ h1 {
   padding: 8px 13px;
   font-size: 1.125rem;
   user-select: all;
+  height: fit-content;
 }
 
 .option:hover {
