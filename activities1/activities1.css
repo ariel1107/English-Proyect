@@ -155,7 +155,7 @@ h1 {
 }
 
 .enunciado {
-  margin-top: 26px;
+  /* margin-top: px; */
   padding: 0 26px;
   display: flex;
   flex-flow: column;
@@ -172,7 +172,7 @@ h1 {
   flex-flow: column;
   padding: 0 26px;
   gap: 2px;
-  height: 18rem;
+  height: 16rem;
   overflow: scroll;
 }
 
