@@ -172,7 +172,7 @@ h1 {
   flex-flow: column;
   padding: 0 26px;
   gap: 2px;
-  height: 16rem;
+  height: 13rem;
   overflow: scroll;
 }
 
@@ -1098,10 +1098,6 @@ footer hr {
 
   .exercise-1 hr {
     display: none;
-  }
-
-  .exercise-1 .enunciado {
-    transform: translateX(-25%);
   }
 
   .list-of-words {
