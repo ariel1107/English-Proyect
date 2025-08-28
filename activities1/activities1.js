@@ -31,8 +31,6 @@ function getNumbers(text) {
 }
 
 const previousExercises = [];
-// let currentExercise = getNumbers(previousExercises);
-// previousExercises.push(currentExercise);
 let currentExercise = 0;
 const mistakes = new Set();
 let exercisesNumber = 1;
@@ -86,9 +84,19 @@ function showNextExercise() {
     document.querySelector(`.exercise-${currentExercise}`).style.display =
       "block";
     saveExercise();
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
 
     console.log(currentExercise);
   } else {
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
     document.querySelector(".results").style.display = "flex";
     if (mistakes.size === 0) {
       preguntasBienRespondidas = Array.from(
@@ -158,7 +166,7 @@ function showNextExercise() {
             <div class="filas">
                 <div class="left-side">
                 <p class="current-exercise">${exercisesNumberArray[i]} of 10</p>
-                  <p>${exercisesName[num - 1]}</p>
+                  <p>"${exercisesName[num - 1]}"</p>
                   </div>
                   <div class="right-side">
                   ${imagen}
@@ -245,7 +253,11 @@ document.querySelectorAll(".option").forEach((opt) => {
     selected = opt;
     e.dataTransfer.setData("text", opt.dataset.value);
   });
+
+  opt.addEventListener("click", logica5y9);
 });
+
+logicListener(".option", ".word");
 
 // Configurar zonas de drop
 document.querySelectorAll(".word").forEach((slot) => {
@@ -263,6 +275,8 @@ document.querySelectorAll(".word").forEach((slot) => {
       slot.style.background = "lightgreen";
       selected.style.display = "none";
       slot.classList.add("all-set");
+      const scroll = slot.closest(".dialogo");
+      if (scroll) slot.scrollIntoView({ behavior: "smooth" });
 
       const container = slot.closest(".exercise").querySelectorAll(".word");
       const allGreen = [...container].every(
@@ -697,16 +711,16 @@ boton4.addEventListener("click", eventoBoton4y6);
 
 // exercise 5.
 
-function logica5y9(e) {
+function logica5y9(e, words, opt) {
   const selected = e.currentTarget;
   const correct = selected.dataset.value;
-  const container = selected.closest(".exercise").querySelectorAll(".words");
+  const container = selected.closest(".exercise").querySelectorAll(words);
 
   const expected = [
     ...selected.closest(".exercise").querySelectorAll(".word-text"),
   ];
 
-  const opciones = selected.closest(".exercise").querySelectorAll(".opt");
+  const opciones = selected.closest(".exercise").querySelectorAll(opt);
   console.log(opciones);
 
   console.log(container);
@@ -742,7 +756,7 @@ function logica5y9(e) {
       zIndex: 1000,
       display: "flex",
       justifyContent: "center",
-      alignItem: "center",
+      alignItems: "center",
       margin: 0,
       border: "none",
       pointerEvents: "none",
@@ -775,6 +789,13 @@ function logica5y9(e) {
 
     setTimeout(() => {
       clone.remove();
+      const scroll = selected.closest(".exercise").querySelector(".dialogo");
+      if (scroll) {
+        const elemento = [...container].find(
+          (slot) => !slot.classList.contains("all-set")
+        );
+        elemento.scrollIntoView({ behavior: "smooth" });
+      }
 
       container[indice].style.backgroundColor = "lightgreen";
       container[indice].classList.add("all-set");
@@ -804,9 +825,15 @@ function logica5y9(e) {
   }
 }
 
-document
-  .querySelectorAll(".opt")
-  .forEach((letter) => letter.addEventListener("click", logica5y9));
+function logicListener(opt, words) {
+  document.querySelectorAll(opt).forEach((letter) =>
+    letter.addEventListener("click", (e) => {
+      logica5y9(e, words, opt);
+    })
+  );
+}
+
+logicListener(".opt", ".words");
 
 document
   .querySelector(".boton-5 button")
@@ -881,4 +908,10 @@ document.querySelector(".try-again").addEventListener("click", () => {
   document.querySelector(".results").style.display = "none";
   UpdateCurrentExercise(previousExercises);
   showNextExercise();
+
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: "smooth",
+  });
 });
