@@ -161,19 +161,19 @@ function showNextExercise() {
 
       const html = `
     <div class="javascript">
-            <hr class="linea" />
-            <div class="all-filas">
-            <div class="filas">
-                <div class="left-side">
-                <p class="current-exercise">${exercisesNumberArray[i]} of 10</p>
-                  <p>"${exercisesName[num - 1]}"</p>
-                  </div>
-                  <div class="right-side">
-                  ${imagen}
-                </div>
-              </div>
+        <hr class="linea" />
+        
+        <div class="filas">
+            <div class="left-side">
+              <p class="current-exercise">${exercisesNumberArray[i]} of 10</p>
+              <p>"${exercisesName[num - 1]}"</p>
             </div>
-            </div>`;
+            <div class="right-side">
+              ${imagen}
+            </div>
+        </div>
+        
+    </div>`;
       containerActivities.insertAdjacentHTML("beforeend", html);
     });
   }
@@ -932,3 +932,8 @@ document.querySelector(".try-again").addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+const altura = document
+  .querySelector(".exercise-1")
+  .getBoundingClientRect().height;
+console.log(altura);
